@@ -1,0 +1,82 @@
+# -----------------------
+# Python Ignores
+# -----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.spec
+
+# Virtual environments
+venv/
+env/
+.book/
+.cache/
+.idea/
+.vscode/
+
+# -----------------------
+# Machine Learning Files
+# -----------------------
+*.pt
+*.bin
+*.safetensors
+*.h5
+*.pkl
+*.joblib
+
+# HuggingFace cache
+~/.cache/huggingface/
+huggingface/
+
+# Chroma Vectorstore
+chroma/
+chromadb/
+*.sqlite3
+
+# -----------------------
+# Data Files
+# (You should not push datasets)
+# -----------------------
+*.csv
+*.xlsx
+*.json
+*.parquet
+*.db
+*.sql
+
+# Project-specific data files
+books.csv
+books_cleaned.csv
+books_with_categories.csv
+books_with_emotions.csv
+tagged_description.txt
+
+Ratings.csv
+Users.csv
+
+# -----------------------
+# Logs & Output
+# -----------------------
+*.log
+*.out
+*.tmp
+
+# -----------------------
+# Jupyter Notebook
+# -----------------------
+.ipynb_checkpoints/
+
+# -----------------------
+# Environment Variables
+# -----------------------
+.env
+.env*
+
+# -----------------------
+# OS files
+# -----------------------
+.DS_Store
+Thumbs.db
+.env
