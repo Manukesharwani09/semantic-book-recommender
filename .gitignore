@@ -1,8 +1,28 @@
+# Environment
 .env
-*.csv
+venv/
+
+# Database files
 *.sqlite3
 chroma/
 chromadb/
+
+# Python cache
 __pycache__/
+*.pyc
+
+# Model files
 *.pt
 *.bin
+
+# Raw/intermediate data (keep only processed files needed for deployment)
+books.csv
+books_cleaned.csv
+books_with_categories.csv
+Ratings.csv
+Users.csv
+
+# Keep these for deployment:
+# - books_with_emotions.csv
+# - tagged_description.txt
+# - cover-not-found.jpg

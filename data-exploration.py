@@ -11,8 +11,7 @@ import matplotlib.pyplot as plt
 # ----------------------------------------
 # Load Dataset
 # ----------------------------------------
-CSV_FILE = "books.csv"  # Make sure this file exists in your folder
-
+CSV_FILE = "books.csv" 
 if not os.path.exists(CSV_FILE):
     raise FileNotFoundError(f"❌ CSV file not found: {CSV_FILE}")
 
@@ -21,37 +20,11 @@ print(f"Loaded dataset: {CSV_FILE}")
 print("Shape:", books.shape)
 print("Columns:", books.columns.tolist())
 
-
-# ----------------------------------------
-# OPTIONAL: Missing value heatmap (disabled)
-# Commented out to prevent Tkinter popup freezing
-# ----------------------------------------
-# ax = plt.axes()
-# sns.heatmap(books.isna().transpose(), cbar=False, ax=ax)
-# plt.xlabel("Columns")
-# plt.ylabel("Missing values")
-# plt.savefig("missing_values_heatmap.png")  # Saves instead of showing
-# plt.close()
-
-
 # ----------------------------------------
 # Create new numeric features
 # ----------------------------------------
 books["missing_description"] = np.where(books["description"].isna(), 1, 0)
 books["age_of_book"] = 2024 - books["published_year"]
-
-
-# ----------------------------------------
-# OPTIONAL: Correlation heatmap (disabled)
-# ----------------------------------------
-# columns_of_interest = ["num_pages", "age_of_book", "missing_description", "average_rating"]
-# correlation_matrix = books[columns_of_interest].corr(method="spearman")
-# sns.set_theme(style="white")
-# plt.figure(figsize=(8, 6))
-# sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm")
-# plt.title("Correlation heatmap")
-# plt.savefig("correlation_heatmap.png")
-# plt.close()
 
 
 # ----------------------------------------
