@@ -6,6 +6,7 @@ venv/
 *.sqlite3
 chroma/
 chromadb/
+chroma_db/
 
 # Python cache
 __pycache__/
